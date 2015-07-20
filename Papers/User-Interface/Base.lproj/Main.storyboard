@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F6a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Efc-3M-Z5C">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Papers Initial View Controller-->
@@ -47,8 +49,32 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="196"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Publication" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TY-SE-rEQ">
+                                            <rect key="frame" x="21" y="167" width="86" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rgk-bl-lXG">
+                                            <rect key="frame" x="32" y="49" width="64" height="98"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="64" id="HEY-rF-djB"/>
+                                                <constraint firstAttribute="width" secondItem="rgk-bl-lXG" secondAttribute="height" multiplier="32:49" id="ntD-fU-iSV"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="rgk-bl-lXG" firstAttribute="top" secondItem="Sa4-ss-uIo" secondAttribute="topMargin" constant="41" id="3hy-xP-RsP"/>
+                                    <constraint firstItem="5TY-SE-rEQ" firstAttribute="top" secondItem="rgk-bl-lXG" secondAttribute="bottom" constant="20" id="JJx-nQ-tbk"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="rgk-bl-lXG" secondAttribute="trailing" constant="24" id="QON-qf-Dgf"/>
+                                    <constraint firstAttribute="centerX" secondItem="5TY-SE-rEQ" secondAttribute="centerX" id="mfK-Zf-qn7"/>
+                                    <constraint firstItem="5TY-SE-rEQ" firstAttribute="bottom" secondItem="Sa4-ss-uIo" secondAttribute="bottomMargin" id="n0E-wb-Mye"/>
+                                    <constraint firstItem="rgk-bl-lXG" firstAttribute="leading" secondItem="Sa4-ss-uIo" secondAttribute="leadingMargin" constant="24" id="z8d-oJ-i2X"/>
+                                </constraints>
                             </collectionViewCell>
                         </cells>
                         <connections>

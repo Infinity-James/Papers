@@ -12,12 +12,17 @@ import UIKit
 class PapersInitialViewController: UIViewController {
 
 	//	MARK: Properties
+	private let publicationsSegueIdentifier = "Publications"
 	let walkthroughManager = WalkthroughManager(numberOfPages: 1, pagePrefix: "WalkthroughPage", storyboardName: "Walkthrough")
 	
 	//	MARK: View Lifecycle
-	override func viewDidLoad() {
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
+		
 		if !WalkthroughManager.shownWalkthrough {
 			self.presentViewController(walkthroughManager.walkthroughViewController, animated: true) {}
+		} else {
+			self.performSegueWithIdentifier(publicationsSegueIdentifier, sender: nil)
 		}
 	}
 }
