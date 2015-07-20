@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F6a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5LD-cm-QnN">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Walkthrough View Controller-->
+        <scene sceneID="hGe-bA-mGT">
+            <objects>
+                <viewController storyboardIdentifier="WalkthroughViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5LD-cm-QnN" customClass="BWWalkthroughViewController" customModule="Papers" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="puZ-UB-9rI"/>
+                        <viewControllerLayoutGuide type="bottom" id="k4I-tI-BEH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2MJ-37-YHu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C4k-VY-2bJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="436" y="1080"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="bhm-gB-Ojt">
+            <objects>
+                <viewController storyboardIdentifier="WalkthroughPage1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gKS-0f-vb4" customClass="BWWalkthroughPageViewController" customModule="Papers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eAp-gZ-9MF"/>
+                        <viewControllerLayoutGuide type="bottom" id="eBY-j5-ebP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="phQ-8g-Zi8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DZk-W3-tfq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064" y="1080"/>
+        </scene>
+    </scenes>
+</document>
