@@ -13,7 +13,7 @@ class PapersInitialViewController: UIViewController {
 
 	//	MARK: Properties
 	private let publicationsSegueIdentifier = "Publications"
-	let walkthroughManager = WalkthroughManager(numberOfPages: 1, pagePrefix: "WalkthroughPage", storyboardName: "Walkthrough")
+	let walkthroughManager = WalkthroughManager(numberOfPages: 2, pagePrefix: "WalkthroughPage", storyboardName: "Walkthrough")
 	
 	//	MARK: View Lifecycle
 	override func viewDidAppear(animated: Bool) {

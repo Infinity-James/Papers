@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F6a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5LD-cm-QnN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5LD-cm-QnN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -73,6 +73,54 @@ Why not?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZk-W3-tfq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1064" y="1080"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="bXT-bp-kOd">
+            <objects>
+                <viewController storyboardIdentifier="WalkthroughPage2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jdS-cF-0PW" customClass="BWWalkthroughPageViewController" customModule="Papers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dKU-xm-tTE"/>
+                        <viewControllerLayoutGuide type="bottom" id="pUq-AQ-oz3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gkK-nP-Uy9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papers Helps You" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zja-oQ-9cy">
+                                <rect key="frame" x="186" y="28" width="228" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="In lots of ways." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WKg-dV-G5q">
+                                <rect key="frame" x="48" y="100" width="504" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="RJn-dz-IDM"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.01176470588" green="0.46666666670000001" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zja-oQ-9cy" firstAttribute="top" secondItem="dKU-xm-tTE" secondAttribute="bottom" constant="8" id="3lS-wU-I26"/>
+                            <constraint firstAttribute="centerX" secondItem="Zja-oQ-9cy" secondAttribute="centerX" id="4Eq-8h-h1U"/>
+                            <constraint firstItem="WKg-dV-G5q" firstAttribute="leading" secondItem="gkK-nP-Uy9" secondAttribute="leadingMargin" priority="800" constant="32" id="5dW-3Y-481"/>
+                            <constraint firstItem="WKg-dV-G5q" firstAttribute="leading" relation="lessThanOrEqual" secondItem="gkK-nP-Uy9" secondAttribute="leadingMargin" constant="48" id="EkZ-aS-pqX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WKg-dV-G5q" secondAttribute="trailing" priority="800" constant="32" id="HZJ-IZ-wmZ"/>
+                            <constraint firstItem="WKg-dV-G5q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gkK-nP-Uy9" secondAttribute="leadingMargin" constant="16" id="KTc-er-7jX"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="WKg-dV-G5q" secondAttribute="trailing" constant="16" id="MlT-dd-e4n"/>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="WKg-dV-G5q" secondAttribute="trailing" constant="48" id="XFU-8w-MEb"/>
+                            <constraint firstAttribute="centerX" secondItem="WKg-dV-G5q" secondAttribute="centerX" id="dJ6-Lu-YpE"/>
+                            <constraint firstItem="WKg-dV-G5q" firstAttribute="top" secondItem="Zja-oQ-9cy" secondAttribute="bottom" constant="39" id="fUZ-Zu-lKb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BO8-5t-kJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1684" y="1080"/>
         </scene>
     </scenes>
 </document>
