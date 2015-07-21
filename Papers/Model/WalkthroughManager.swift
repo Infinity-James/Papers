@@ -30,19 +30,19 @@ class WalkthroughManager {
 	
 	//	MARK: Computed Properties
 	/**	The view controller containing the walkthrough.	*/
-	var walkthroughViewController: UIViewController {
-		get {
-			let walkthrough = storyboard.instantiateInitialViewController() as! BWWalkthroughViewController
-			walkthrough.delegate = self
-			for pageNumber in 1...numberOfPages {
-				let pageName = "\(pagePrefix)\(pageNumber)"
-				let page = storyboard.instantiateViewControllerWithIdentifier(pageName) as! UIViewController
-				walkthrough.addViewController(page)
-			}
-			
-			return walkthrough
-		}
-	}
+	var walkthroughViewController: UIViewController
+    
+    //  MARK: Convenience Methods
+    
+    private func setupWalkthroughViewController() {
+        let walkthrough = walkthroughViewController as! BWWalkthroughViewController
+        walkthrough.delegate = self
+        for pageNumber in 1...numberOfPages {
+            let pageName = "\(pagePrefix)\(pageNumber)"
+            let page = storyboard.instantiateViewControllerWithIdentifier(pageName) as! UIViewController
+            walkthrough.addViewController(page)
+        }
+    }
 	
 	/**	Whether or not the walkthrough has been shown before.	*/
 	static var shownWalkthrough: Bool {
@@ -58,6 +58,10 @@ class WalkthroughManager {
 		self.pagePrefix = pagePrefix
 		
 		storyboard = UIStoryboard(name: storyboardName, bundle: storyboardBundle)
+        
+        walkthroughViewController = storyboard.instantiateInitialViewController() as! UIViewController
+        
+        setupWalkthroughViewController()
 	}
 }
 

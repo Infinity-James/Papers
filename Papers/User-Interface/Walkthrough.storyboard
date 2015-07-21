@@ -16,8 +16,50 @@
                     <view key="view" contentMode="scaleToFill" id="2MJ-37-YHu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCI-Gw-rAr">
+                                <rect key="frame" x="269" y="550" width="62" height="30"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextPage" destination="5LD-cm-QnN" eventType="touchUpInside" id="3v4-nK-VgZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbV-yt-nk7">
+                                <rect key="frame" x="16" y="550" width="35" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="prevPage" destination="5LD-cm-QnN" eventType="touchUpInside" id="atI-6e-Xa3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNY-sJ-baT">
+                                <rect key="frame" x="553" y="550" width="31" height="30"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="5LD-cm-QnN" eventType="touchUpInside" id="kwi-Ds-FuX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="zCI-Gw-rAr" secondAttribute="centerX" id="23l-Hx-3a3"/>
+                            <constraint firstItem="k4I-tI-BEH" firstAttribute="top" secondItem="zCI-Gw-rAr" secondAttribute="bottom" constant="20" id="9DR-Gv-VSQ"/>
+                            <constraint firstItem="vbV-yt-nk7" firstAttribute="leading" secondItem="2MJ-37-YHu" secondAttribute="leadingMargin" id="MED-7f-RlD"/>
+                            <constraint firstItem="bNY-sJ-baT" firstAttribute="trailing" secondItem="2MJ-37-YHu" secondAttribute="trailingMargin" id="PuH-sl-drN"/>
+                            <constraint firstItem="k4I-tI-BEH" firstAttribute="top" secondItem="vbV-yt-nk7" secondAttribute="bottom" constant="20" id="TqM-Cd-Ccs"/>
+                            <constraint firstItem="k4I-tI-BEH" firstAttribute="top" secondItem="bNY-sJ-baT" secondAttribute="bottom" constant="20" id="l1x-8f-MMg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="closeButton" destination="bNY-sJ-baT" id="46W-qb-2za"/>
+                        <outlet property="nextButton" destination="zCI-Gw-rAr" id="WnQ-aY-lBk"/>
+                        <outlet property="prevButton" destination="vbV-yt-nk7" id="klj-5k-L31"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C4k-VY-2bJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
